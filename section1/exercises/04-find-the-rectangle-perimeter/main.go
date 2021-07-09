@@ -1,12 +1,6 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
+
+import "fmt"
 
 // ---------------------------------------------------------
 // EXERCISE: Find the Rectangle's Perimeter
@@ -31,14 +25,12 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// UNCOMMENT THE CODE BELOW:
+	var (
+		perimeter int
+		width, height = 5, 6
+	)
 
-	// var (
-	// 	perimeter        int
-	// 	width, height = 5, 6
-	// )
+	perimeter = (width * 2) + (height * 2)
+	fmt.Println(perimeter)
 
-	// USE THE VARIABLES ABOVE WHEN CALCULATING YOUR RESULT
-
-	// ADD YOUR CODE BELOW
 }

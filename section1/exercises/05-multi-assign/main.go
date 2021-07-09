@@ -1,11 +1,3 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
 
 import "fmt"
@@ -24,14 +16,13 @@ import "fmt"
 // ---------------------------------------------------------
 
 func main() {
-	// DO NOT TOUCH THIS
 	var (
-		lang    string
+		lang string
 		version int
 	)
 
-	// ADD YOUR CODE BELOW
+	lang = "go"
+	version = 2
 
-	// DO NOT TOUCH THIS
 	fmt.Println(lang, "version", version)
 }
