@@ -2,16 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e707f05b-d697-4a29-8119-79c5b2632ba3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/goCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/goCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/greeter/greeter.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/greeter/greeter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/01-make-it-blue/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/01-make-it-blue/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/02-vars-to-vars/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/02-vars-to-vars/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/03-assign-with-expressions/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/03-assign-with-expressions/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/04-find-the-rectangle-perimeter/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/04-find-the-rectangle-perimeter/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/05-multi-assign/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/05-multi-assign/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/06-multi-assign-2/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/06-multi-assign-2/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/07-multi-short-func/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/07-multi-short-func/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/08-swapper/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/08-swapper/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/09-swapper-2/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/09-swapper-2/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/10-discard-the-file/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/10-discard-the-file/solution/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/section1/exercises/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../sdk/go1.17beta1" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../go/go1.16.5" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -19,11 +38,13 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1v3F9dIcftg5qMV6jiLrHm60Wfq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />

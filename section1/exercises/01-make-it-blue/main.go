@@ -1,12 +1,6 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
+package main
 
-//package main
+import "fmt"
 
 // ---------------------------------------------------------
 // EXERCISE: Make It Blue
@@ -19,12 +13,9 @@
 //  blue
 // ---------------------------------------------------------
 
-//func main() {
-	// UNCOMMENT THE CODE BELOW:
+func main() {
+	color := "green"
+	color = "blue"
 
-	// color := "green"
-
-	// ADD YOUR CODE BELOW:
-
-	// ?
+	fmt.Println(color)
 }
