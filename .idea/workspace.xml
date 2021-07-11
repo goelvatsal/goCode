@@ -3,21 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="e707f05b-d697-4a29-8119-79c5b2632ba3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/03-assign-with-expressions/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/03-assign-with-expressions/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/04-find-the-rectangle-perimeter/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/04-find-the-rectangle-perimeter/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/05-multi-assign/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/05-multi-assign/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/06-multi-assign-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/06-multi-assign-2/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/07-multi-short-func/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/07-multi-short-func/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/08-swapper/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/08-swapper/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/09-swapper-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/09-swapper-2/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/exercises/10-discard-the-file/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises/10-discard-the-file/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section1/greeter/printArgs" beforeDir="false" afterPath="$PROJECT_DIR$/section1/greeter/printArgs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GOROOT" url="file://$USER_HOME$/go/go1.16.5" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../go/go1.16.5" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -39,7 +32,7 @@
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
