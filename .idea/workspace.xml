@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e707f05b-d697-4a29-8119-79c5b2632ba3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section1/greeter/printArgs" beforeDir="false" afterPath="$PROJECT_DIR$/section1/greeter/printArgs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section1/exercises02/exercises/01-count-arguments/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises02/exercises/01-count-arguments/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section1/exercises02/exercises/02-print-the-path/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises02/exercises/02-print-the-path/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section1/exercises02/exercises/03-print-your-name/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises02/exercises/03-print-your-name/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section1/exercises02/exercises/04-greet-more-people/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises02/exercises/04-greet-more-people/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section1/exercises02/exercises/05-greet-5-people/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/section1/exercises02/exercises/05-greet-5-people/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

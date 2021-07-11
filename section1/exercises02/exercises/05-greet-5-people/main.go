@@ -1,12 +1,9 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
+
+import (
+	"fmt"
+	"os"
+)
 
 // ---------------------------------------------------------
 // EXERCISE: Greet 5 People
@@ -33,4 +30,10 @@ package main
 
 func main() {
 	// TYPE YOUR CODE HERE
+	fmt.Println("There are", len(os.Args) - 1, "great people!")
+	fmt.Println("Hello, Great", os.Args[1])
+	fmt.Println("Hello, Great", os.Args[2])
+	fmt.Println("Hello, Great", os.Args[3])
+	fmt.Println("Hello, Great", os.Args[4])
+	fmt.Println("Hello, Great", os.Args[5])
 }
