@@ -8,29 +8,15 @@
 
 package main
 
-import "fmt"
-
 // ---------------------------------------------------------
-// EXERCISE: Iota Seasons
+// EXERCISE: Print the Type #2
 //
-//  Use iota to initialize the season constants.
-//
-// HINT
-//  You can change the order of the constants.
+//  Print the type and value of 3.14 using fmt.Printf
 //
 // EXPECTED OUTPUT
-//  12 3 6 9
+//  Type of 3.14 is float64
 // ---------------------------------------------------------
 
 func main() {
-	// NOTE : You should remove all the initializers below
-	//        first. Then use iota to fix it.
-	const (
-		Winter = 12
-		Spring = 3
-		Summer = 6
-		Fall   = 9
-	)
-
-	fmt.Println(Winter, Spring, Summer, Fall)
+	// ?
 }
