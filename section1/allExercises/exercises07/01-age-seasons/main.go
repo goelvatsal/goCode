@@ -1,12 +1,6 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
+
+import "fmt"
 
 // ---------------------------------------------------------
 // EXERCISE: Age Seasons
@@ -28,8 +22,18 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// Change this accordingly to produce the expected outputs
-	// age := 10
+	age := 10
 
 	// Type your if statement here.
+	if age > 60 {
+		fmt.Printf("Getting older\n")
+	} else if age > 30 {
+		fmt.Printf("getting wiser\n")
+	} else if age > 20 {
+		fmt.Printf("Adulthood\n")
+	} else if age > 10 {
+		fmt.Printf("Young blood\n")
+	} else {
+		fmt.Printf("Booting up\n")
+	}
 }

@@ -11,7 +11,7 @@ package main
 import "fmt"
 
 func main() {
-	age := 10
+	age := 69
 
 	if age > 60 {
 		fmt.Println("Getting older")
