@@ -29,7 +29,10 @@ import (
 func main() {
 
 //	if statement if user does not give args
-	if len(os.Args[1]) == '0' {
-		fmt.Printf("Give me arguments!")
+	args := os.Args
+	l := len(args) - 1
+
+	if l == 0 {
+		fmt.Printf("Give me arguments.\n")
 	}
-}
+	}
