@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Arg Count
 //
@@ -22,4 +27,9 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+
+//	if statement if user does not give args
+	if len(os.Args[1]) == '0' {
+		fmt.Printf("Give me arguments!")
+	}
 }
