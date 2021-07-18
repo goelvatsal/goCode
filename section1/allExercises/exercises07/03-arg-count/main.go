@@ -34,5 +34,9 @@ func main() {
 
 	if l == 0 {
 		fmt.Printf("Give me arguments.\n")
+	} else if l == 2 {
+		fmt.Printf("There are %d: %q\n", l, args[l])
+
 	}
+
 	}
