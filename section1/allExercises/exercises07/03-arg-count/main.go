@@ -28,15 +28,20 @@ import (
 
 func main() {
 
-//	if statement if user does not give args
+	//	if statement if user does not give args
 	args := os.Args
 	l := len(args) - 1
 
 	if l == 0 {
 		fmt.Printf("Give me arguments.\n")
+	} else if l == 1 {
+		fmt.Printf("There is one: %q\n", args[l])
 	} else if l == 2 {
-		fmt.Printf("There are %d: %q\n", l, args[l])
-
+		fmt.Printf(
+			`There are two: "%s %s"`+"\n",
+			args[1], args[2])
+	} else {
+		fmt.Printf("There are %d arguments.\n", l)
 	}
 
-	}
+}
