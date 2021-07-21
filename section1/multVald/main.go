@@ -22,7 +22,7 @@ func main() {
 	u2 := "inanc"
 	p2 := "1879"
 
-	if args[1] != u || args[1] != u2 {
+	if !(args[1] == u || args[1] == u2) {
 		fmt.Printf("Access denied for %q.\n", args[1])
 	}
 
