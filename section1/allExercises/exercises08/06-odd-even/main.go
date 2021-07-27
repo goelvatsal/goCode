@@ -1,12 +1,10 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
+
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
 
 // ---------------------------------------------------------
 // EXERCISE: Odd or Even
@@ -37,4 +35,22 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	a := os.Args
+	n, err := strconv.Atoi(a[1])
+
+	if err != nil {
+		fmt.Printf("%s is not a number.\n", a[1])
+	}
+
+	if len(n) != 2 {
+		fmt.Printf("Pick a number.\n")
+		return
+	}
+
+	if n % 8 == 0 {
+		fmt.Printf("%d is a even number and it's divisible by 8.\n", n)
+	} else if n % 2 == 0 {
+		fmt.Printf("%d is an even number.\n", n)
+	}
+
 }
