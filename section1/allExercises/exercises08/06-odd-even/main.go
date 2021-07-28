@@ -35,22 +35,23 @@ import (
 // ---------------------------------------------------------
 
 func main() {
-	a := os.Args
-	n, err := strconv.Atoi(a[1])
-
-	if err != nil {
-		fmt.Printf("%s is not a number.\n", a[1])
-	}
-
-	if len(n) != 2 {
-		fmt.Printf("Pick a number.\n")
+	if len(os.Args) != 2 {
+		fmt.Println("Pick a number")
 		return
 	}
 
-	if n % 8 == 0 {
+	n, err := strconv.Atoi(os.Args[1])
+	if err != nil {
+		fmt.Printf("%s is not a number.\n", os.Args[1])
+		return
+	}
+
+	if n%8 == 0 {
 		fmt.Printf("%d is a even number and it's divisible by 8.\n", n)
-	} else if n % 2 == 0 {
+	} else if n%2 == 0 {
 		fmt.Printf("%d is an even number.\n", n)
+	} else {
+		fmt.Printf("%d is a odd number.\n", n)
 	}
 
 }
