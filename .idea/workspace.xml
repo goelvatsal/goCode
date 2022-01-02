@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78ba29af-e422-452d-a181-77663b39575f" name="Changes" comment="" />
+    <list default="true" id="78ba29af-e422-452d-a181-77663b39575f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goCode/section1/set1/exercises1/01-make-it-blue/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/goCode/section1/set1/exercises1/01-make-it-blue/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goCode/section1/set1/exercises1/02-vars-to-vars/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/goCode/section1/set1/exercises1/02-vars-to-vars/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goCode/section1/set1/exercises1/03-assign-with-expressions/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/goCode/section1/set1/exercises1/03-assign-with-expressions/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goCode/section1/set1/exercises1/04-find-the-rectangle-perimeter/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/goCode/section1/set1/exercises1/04-find-the-rectangle-perimeter/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goCode/section1/set1/exercises1/05-multi-assign/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/goCode/section1/set1/exercises1/05-multi-assign/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +27,9 @@
   <component name="GOROOT" url="file://$PROJECT_DIR$/../sdk/go1.17beta1" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1w0aF0gdXSeMz8JMtfBIDj3Nja6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -48,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\goelv\goCode\goCode" />
       <recent name="C:\Users\goelv\goCode\goCode\section1" />
       <recent name="C:\Users\goelv\goCode\goCode\section1\declerationSyntax" />
     </key>
