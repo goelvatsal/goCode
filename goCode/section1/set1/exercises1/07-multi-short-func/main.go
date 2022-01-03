@@ -31,12 +31,11 @@ import "fmt"
 
 func main() {
 	// ADD YOUR DECLARATIONS HERE
-	a, b := 0, 0
+	_, b := multi()
 
 	// THEN UNCOMMENT THE CODE BELOW
 
 	fmt.Println(b)
-	multi()
 }
 
 // multi is a function that returns multiple int values
