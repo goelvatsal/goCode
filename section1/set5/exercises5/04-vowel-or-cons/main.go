@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Vowel or Consonant
 //
@@ -49,4 +54,15 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	//fmt.Println(os.Args)
+	l := len(os.Args) - 1
+	
+	//l := os.Args[1]
+
+	fmt.Println(l)
+	if l > 1 {
+		fmt.Println("Give me a letter.")
+	} else if l == 0 {
+		fmt.Println("Give me a letter.")
+	}
 }
