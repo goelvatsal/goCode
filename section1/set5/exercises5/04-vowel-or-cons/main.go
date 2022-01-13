@@ -11,6 +11,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 // ---------------------------------------------------------
@@ -54,15 +55,14 @@ import (
 // ---------------------------------------------------------
 
 func main() {
-	//fmt.Println(os.Args)
-	l := len(os.Args) - 1
-	
-	//l := os.Args[1]
-
-	fmt.Println(l)
-	if l > 1 {
-		fmt.Println("Give me a letter.")
-	} else if l == 0 {
-		fmt.Println("Give me a letter.")
+	//fmt.Println(len(os.Args[1]))
+	if len(os.Args) > 2 && len(os.Args[1]) >= 2 {
+		fmt.Println("Give me a letter, not a word.")
+	} else if len(os.Args[1]) < 1 && len(os.Args) == 1 {
+		fmt.Println("Pass this argument a letter.")
 	}
+
+	i := strings.IndexAny(os.Args[1], "aeiou")
+
+	//fmt.Printf("%q is a vowel.", i)
 }
