@@ -44,10 +44,7 @@ func main() {
 	user, pass := "jack", 1888
 
 	// if no input received or only username or pass, print usage
-	if len(os.Args) == 1 {
-		fmt.Println("Usage: [username] [password]")
-		return
-	} else if len(os.Args) == 2 {
+	if len(os.Args) == 1 || len(os.Args) == 2 {
 		fmt.Println("Usage: [username] [password]")
 		return
 	}
