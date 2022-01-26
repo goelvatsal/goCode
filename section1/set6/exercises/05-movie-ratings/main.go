@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // STORY
 //
@@ -53,4 +59,20 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// declare global variables
+	a := os.Args
+	var n int
+	var err error
+
+	// check if age not entered
+	if len(a) != 2 {
+		fmt.Println("Please enter a number.")
+		// check if age not positive or if age var is word
+	} else if n, err = strconv.Atoi(a[1]); n < 0 {
+		fmt.Println("Enter a positive integer.")
+	} else if err != nil {
+		fmt.Printf("Cannot check %q.\n", a[1])
+		// check if age between 13 and 17
+	} else if
+	// check if age below 13
 }
