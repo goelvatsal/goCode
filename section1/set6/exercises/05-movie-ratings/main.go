@@ -73,6 +73,12 @@ func main() {
 	} else if err != nil {
 		fmt.Printf("Cannot check %q.\n", a[1])
 		// check if age between 13 and 17
-	} else if
-	// check if age below 13
+	} else if n >= 13 && n <= 17 {
+		fmt.Println("PG-13")
+	} else if n > 17 {
+		fmt.Println("R-Rated")
+	} else if n < 13 {
+		// check if age below 13
+		fmt.Println("PG-Rated")
+	}
 }
