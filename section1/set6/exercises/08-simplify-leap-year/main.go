@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Simplify the Leap Year
 //
@@ -20,4 +26,17 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// FOR THIS EXERCISE, LOOK AT PREVIOUS EXERCISE'S SOLUTION
+	a := os.Args
+
+	if len(a) != 2 {
+		fmt.Println("Give me a year number.")
+		return
+	} else if year, err := strconv.Atoi(a[1]); err != nil {
+		fmt.Printf("%q is not a valid year.\n", a[1])
+	} else if year%4 == 0 {
+		fmt.Printf("%d is a leap year.\n", year)
+	} else {
+		fmt.Printf("%d is not a leap year.\n", year)
+	}
 }
