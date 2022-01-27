@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Days in a Month
 //
@@ -88,4 +93,16 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// declare global variables
+	a := os.Args
+
+	// check if os.Args is empty
+	if len(a) != 2 {
+		fmt.Println("Give me a month name.")
+	}
+	// check correct month names entered
+	if a[1] != "january", "february", "march", "april", "may", "june",
+		"july", "august", "september", "october", "november", "december" {
+		fmt.Println("")
+	}
 }

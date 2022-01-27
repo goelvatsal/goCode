@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Leap Year
 //
@@ -37,4 +43,24 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// declare variables
+	a := os.Args
+
+	// check if os.Args[1] is empty
+	if len(a) != 2 {
+		fmt.Println("Give me a year number.")
+		return
+	}
+
+	// check if no number input is provided
+	if n, err := strconv.Atoi(a[1]); err != nil {
+		fmt.Printf("%q is not a valid year.\n", a[1])
+		// check if number is leap year if divisible by 4 cleanly
+	} else if n%4 == 0 {
+		fmt.Printf("%d is a leap year.\n", n)
+		// check if number is leap year if divisible by 4 cleanly
+	} else if n%4 != 0 {
+		fmt.Printf("%d is not a leap year.\n", n)
+	}
+
 }
