@@ -49,7 +49,7 @@ func main() {
 	a := os.Args
 
 	// check if os.Args is empty
-	if len(a) != 2 || len(a[1]) <= 0 {
+	if len(a) != 2 {
 		fmt.Println("Pick a number.")
 		return
 		// check if n is a number, not words or letters
@@ -59,7 +59,7 @@ func main() {
 	} else if n%2 == 0 && n%8 != 0 {
 		fmt.Printf("%d is an even number.\n", n)
 		// check if dividend is odd
-	} else if n&2 != 0 {
+	} else if n%2 != 0 {
 		fmt.Printf("%d is an odd number.\n", n)
 		// check if dividend is even and multiple of 8
 	} else if n%2 == 0 && n&8 == 0 {

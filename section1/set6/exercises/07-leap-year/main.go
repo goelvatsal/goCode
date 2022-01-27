@@ -45,8 +45,6 @@ import (
 func main() {
 	// declare variables
 	a := os.Args
-	var n int
-	var err error
 
 	// check if os.Args[1] is empty
 	if len(a) != 2 {
@@ -55,7 +53,7 @@ func main() {
 	}
 
 	// check if no number input is provided
-	if n, err = strconv.Atoi(a[1]); err != nil {
+	if n, err := strconv.Atoi(a[1]); err != nil {
 		fmt.Printf("%q is not a valid year.\n", a[1])
 		// check if number is leap year if divisible by 4 cleanly
 	} else if n%4 == 0 {
