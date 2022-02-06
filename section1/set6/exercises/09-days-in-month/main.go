@@ -101,8 +101,6 @@ func main() {
 		fmt.Println("Give me a month name.")
 	}
 	// check correct month names entered
-	if a[1] != "january", "february", "march", "april", "may", "june",
-		"july", "august", "september", "october", "november", "december" {
-		fmt.Println("")
+
 	}
 }
