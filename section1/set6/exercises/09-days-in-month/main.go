@@ -102,5 +102,4 @@ func main() {
 	}
 	// check correct month names entered
 
-	}
 }
