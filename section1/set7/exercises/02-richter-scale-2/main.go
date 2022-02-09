@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Richter Scale #2
 //
@@ -67,4 +72,38 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// handle error checking
+	if len(os.Args) != 2 {
+		fmt.Println("Give me the magnitude of the earthquake in human terms.")
+		return
+	}
+
+	//
+	//// handle error checking
+	//if err != nil {
+	//	fmt.Printf("%s's richter scale is unknown.\n", os.Args[1])
+	//	return
+	//}
+
+	// create switch statement
+	switch {
+	case os.Args[1] == "micro":
+		fmt.Printf("micro's richter scale is less than 2.0\n")
+	case os.Args[1] == "very minor":
+		fmt.Printf("very minor's richter scale is 2 - 2.9\n")
+	case os.Args[1] == "minor":
+		fmt.Printf("minor's richter scale is 3 - 3.9\n")
+	case os.Args[1] == "light":
+		fmt.Printf("light's richter scale is 4 - 4.9\n")
+	case os.Args[1] == "moderate":
+		fmt.Printf("moderate's richter scale is 5 - 5.9\n")
+	case os.Args[1] == "strong":
+		fmt.Printf("strong's richter scale is 6 - 6.9\n")
+	case os.Args[1] == "major":
+		fmt.Printf("major's richter scale is 7 - 7.9\n")
+	case os.Args[1] == "great":
+		fmt.Printf("great's richter scale is 8 - 9.9\n")
+	case os.Args[1] == "massive":
+		fmt.Printf("massive's richter scale is 10+\n")
+	}
 }

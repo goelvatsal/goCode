@@ -77,18 +77,18 @@ import (
 // ---------------------------------------------------------
 
 func main() {
+	// handle error checking
+	if len(os.Args) != 2 {
+		fmt.Println("Give me the magnitude of the earthquake.")
+		return
+	}
+
 	// declare variables
-	m := os.Args[1]
-	f, err := strconv.ParseFloat(m, 64)
+	f, err := strconv.ParseFloat(os.Args[1], 64)
 
 	// handle error checking
 	if err != nil {
 		fmt.Println("I couldn't get that, sorry.")
-		return
-	}
-
-	if len(os.Args) <= 1 {
-		fmt.Println("Give me the magnitude of the earthquake.")
 		return
 	}
 
