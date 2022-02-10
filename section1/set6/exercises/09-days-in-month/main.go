@@ -11,6 +11,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
+	"time"
 )
 
 // ---------------------------------------------------------
@@ -93,13 +95,28 @@ import (
 // ---------------------------------------------------------
 
 func main() {
-	// declare global variables
-	a := os.Args
-
-	// check if os.Args is empty
-	if len(a) != 2 {
+	switch {
+	case len(os.Args) != 2:
 		fmt.Println("Give me a month name.")
 	}
-	// check correct month names entered
 
+	year := time.Now().Year()
+	leap := year%4 == 0 && (year%100 != 0 || year%400 == 0)
+	days, month := 28, os.Args[1]
+	m := strings.ToLower(month)
+
+	switch m {
+	case "april", "june", "september", "november":
+		days = 30
+	case "january", "march", "may", "july", "august", "october", "december":
+		days = 31
+	case "february":
+		if leap {
+			days = 29
+		}
+	default:
+		fmt.Printf("%q is not a month.\n", month)
+	}
+
+	fmt.Printf("%q has %d days.\n", month, days)
 }

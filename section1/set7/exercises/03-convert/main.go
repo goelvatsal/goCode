@@ -19,20 +19,11 @@ import (
 //  Convert the if statement to a switch statement.
 // ---------------------------------------------------------
 
-const (
-	usage       = "Usage: [username] [password]"
-	errUser     = "Access denied for %q.\n"
-	errPwd      = "Invalid password for %q.\n"
-	accessOK    = "Access granted to %q.\n"
-	user, user2 = "jack", "inanc"
-	pass, pass2 = "1888", "1879"
-)
-
 func main() {
 	args := os.Args
 
 	if len(args) != 3 {
-		fmt.Println(usage)
+		fmt.Println("Usage: [username] [password]")
 		return
 	}
 
@@ -41,13 +32,25 @@ func main() {
 	//
 	// REFACTOR THIS TO A SWITCH
 	//
-	if u != user && u != user2 {
-		fmt.Printf(errUser, u)
-	} else if u == user && p == pass {
-		fmt.Printf(accessOK, u)
-	} else if u == user2 && p == pass2 {
-		fmt.Printf(accessOK, u)
+	if u != "jack" && u != "inanc" {
+		fmt.Printf("Access denied for %q.\n", u)
+	} else if u == "jack" && p == "1888" {
+		fmt.Printf("Access granted to %q.\n", u)
+	} else if u == "inanc" && p == "1879" {
+		fmt.Printf("Access granted to %q.\n", u)
 	} else {
-		fmt.Printf(errPwd, u)
+		fmt.Printf("Invalid password for %q.\n", u)
+	}
+
+	// SWITCH STARTS HERE
+	switch {
+	case u != "jack" && u != "inanc":
+		fmt.Printf("Access denied for %q.\n", u)
+	case u == "jack" && p == "1888":
+		fallthrough
+	case u == "inanc" && p == "1879":
+		fmt.Printf("Access granted for %q.\n", u)
+	default:
+		fmt.Printf("Invalid password for %q.\n", u)
 	}
 }
