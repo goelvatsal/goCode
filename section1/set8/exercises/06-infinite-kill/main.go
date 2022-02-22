@@ -8,7 +8,11 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 // ---------------------------------------------------------
 // EXERCISE: Infinite Kill
@@ -55,7 +59,20 @@ import "fmt"
 // ---------------------------------------------------------
 
 func main() {
-	for i := 0; ; i++ {
-		fmt.Println()
+	for {
+		var c string
+
+		switch rand.Intn(4) {
+		case 0:
+			c = `\`
+		case 1:
+			c = "-"
+		case 2:
+			c = "/"
+		case 3:
+			c = "|"
+		}
+		fmt.Printf("\r%s: Please wait. Processing...\n", c)
+		time.Sleep(250 * time.Millisecond)
 	}
 }

@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Dynamic Table
 //
@@ -54,4 +60,16 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// declare n for err handling
+	n, err := strconv.Atoi(os.Args[1])
+	// add error handling
+	if err != nil {
+		fmt.Println("Wrong size.")
+		return
+	} else if len(os.Args) != 2 {
+		fmt.Println("Give me the size of the table.")
+		return
+	}
+	// print table
+	fmt.Println(n)
 }
