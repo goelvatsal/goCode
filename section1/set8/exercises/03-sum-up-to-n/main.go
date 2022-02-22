@@ -42,9 +42,8 @@ import (
 // ---------------------------------------------------------
 
 func main() {
-	a := os.Args
-	min, err := strconv.Atoi(a[1])
-	max, serr := strconv.Atoi(a[2])
+	min, err := strconv.Atoi(os.Args[1])
+	max, serr := strconv.Atoi(os.Args[2])
 
 	if err != nil || serr != nil {
 		fmt.Printf("Please input a integer value.\n")

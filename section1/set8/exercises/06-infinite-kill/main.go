@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Infinite Kill
 //
@@ -38,7 +40,7 @@ package main
 //  If this exercise is hard for you now, wait until the
 //  lucky number lecture. Even then so, then just skip it.
 //
-//  You can return back to it afterwards.
+//  You can return to it afterwards.
 //
 // EXPECTED OUTPUT
 //  - The program should display the following messages in any order.
@@ -53,4 +55,7 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	for i := 0; ; i++ {
+		fmt.Println()
+	}
 }

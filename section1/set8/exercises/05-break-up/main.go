@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Break Up
 //
@@ -28,4 +34,32 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	min, err := strconv.Atoi(os.Args[1])
+	max, err2 := strconv.Atoi(os.Args[2])
+
+	if err != nil || err2 != nil {
+		fmt.Printf("Please input a integer value.\n")
+		return
+	} else if min > max {
+		fmt.Printf("The minimum value is greater than the maximum value.\n")
+		return
+	}
+
+	var sum int
+	for i := min; ; i++ {
+		if i%2 != 0 {
+			continue
+		}
+		sum += i
+		fmt.Print(i)
+
+		if i < max {
+			fmt.Print(" + ")
+		}
+
+		if i == max {
+			break
+		}
+	}
+	fmt.Printf(" = %d\n", sum)
 }
