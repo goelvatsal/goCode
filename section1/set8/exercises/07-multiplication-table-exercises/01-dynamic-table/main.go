@@ -62,6 +62,7 @@ import (
 func main() {
 	// declare n for err handling
 	n, err := strconv.Atoi(os.Args[1])
+
 	// add error handling
 	if err != nil {
 		fmt.Println("Wrong size.")
@@ -70,6 +71,9 @@ func main() {
 		fmt.Println("Give me the size of the table.")
 		return
 	}
+
 	// print table
-	fmt.Println(n)
+	for i = 0; i < n; i++ {
+
+	}
 }
