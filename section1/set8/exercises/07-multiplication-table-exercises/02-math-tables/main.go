@@ -141,6 +141,7 @@ func main() {
 	for i := 0.; i <= float64(n); i++ {
 		fmt.Printf("%5.0f", i)
 		for j := 0.; j <= float64(n); j++ {
+			m := math.Mod(i, j)
 			switch os.Args[1] {
 			case "/":
 				if i/j == 0 || j == 0 {
@@ -155,9 +156,13 @@ func main() {
 			case "-":
 				fmt.Printf("%5.0f", i-j)
 			case "%":
-				m := math.Mod(i, j)
-				fmt.Printf("%5.0f", m)
+				if math.IsNaN(m) == true {
+					fmt.Printf("%5.0f", 0.0)
+				} else {
+					fmt.Printf("%5.0f", m)
+				}
 			}
+
 		}
 		fmt.Println()
 	}
