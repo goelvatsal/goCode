@@ -1,11 +1,3 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
 
 import (
@@ -67,10 +59,10 @@ Want to play?`
 		return
 	}
 
-	for turn := 0; turn < maxTurns; turn++ {
+	for t := 0; t < maxTurns; t++ {
 		n := rand.Intn(guess + 1)
 
-		if turn == 1 && n == guess {
+		if t == 1 && n == guess {
 			fmt.Println("YOU WON ON YOUR FIRST TRY!")
 			return
 		}

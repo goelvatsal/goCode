@@ -1,11 +1,3 @@
-// Copyright © 2018 Inanc Gumus
-// Learn Go Programming Course
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-//
-// For more tutorials  : https://learngoprogramming.com
-// In-person training  : https://www.linkedin.com/in/inancgumus/
-// Follow me on twitter: https://twitter.com/inancgumus
-
 package main
 
 import (
@@ -74,32 +66,22 @@ Want to play?`
 		return
 	}
 
-	if args[0] == "-v" {
-		for turn := 0; turn < maxTurns; turn++ {
-			n := rand.Intn(guess + 1)
+	for turn := 0; turn < maxTurns; turn++ {
+		n := rand.Intn(guess + 1)
 
+		if args[0] == "-v" {
 			fmt.Printf("%d ", n)
-
-			if turn == 4 || n == guess {
-				fmt.Println()
-			}
-
-			if n == guess {
-				fmt.Println("YOU WIN!")
-				return
-			}
 		}
-		fmt.Println("YOU LOST... Try again?")
-		return
-	} else {
-		for turn := 0; turn < maxTurns; turn++ {
-			n := rand.Intn(guess + 1)
 
-			if n == guess {
-				fmt.Println("YOU WIN!")
-				return
-			}
+		if turn == 4 || n == guess {
+			fmt.Println()
 		}
-		fmt.Println("YOU LOST... Try again?")
+
+		if n == guess {
+			fmt.Println("YOU WIN!")
+			return
+		}
 	}
+	fmt.Println("YOU LOST... Try again?")
+	return
 }
