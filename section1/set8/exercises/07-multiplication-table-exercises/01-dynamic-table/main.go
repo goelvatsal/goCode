@@ -73,7 +73,17 @@ func main() {
 	}
 
 	// print table
-	for i = 0; i < n; i++ {
+	fmt.Printf("%5s", "X")
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%5d", i)
+	}
+	fmt.Println()
 
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%5d", i)
+		for j := 0; j <= n; j++ {
+			fmt.Printf("%5d", i*j)
+		}
+		fmt.Println()
 	}
 }

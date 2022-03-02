@@ -8,6 +8,14 @@
 
 package main
 
+import (
+	"fmt"
+	"math"
+	"os"
+	"strconv"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Math Tables
 //
@@ -105,4 +113,64 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	args := os.Args[1:]
+
+	if len(os.Args) != 3 {
+		fmt.Println("Usage: [op = %*/+-] [size]")
+		return
+	}
+
+	os1 := strings.IndexAny(args[0], "%*-/+")
+
+	if os1 == -1 {
+		fmt.Println("Invalid operator.\nValid ops are: %+-*/")
+		return
+	}
+
+	n, err := strconv.Atoi(args[1])
+	if err != nil {
+		fmt.Println("Incorrect size value.\nUsage: [op = %*/+-] [size]")
+		return
+	}
+
+	// printing the first line
+	fmt.Printf("%5s", args[0])
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%5d", i)
+	}
+	fmt.Println()
+
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%5d", i)
+		for j := 0; j <= n; j++ {
+			fmt.Printf("%5d", mathTable(args[0], j, i))
+		}
+		fmt.Println()
+	}
+}
+
+func mathTable(args string, j int, i int) int {
+	v := 0
+	switch args {
+	case "/":
+		if j == 0 || i == 0 {
+			v = 0
+		} else {
+			v = i / j
+		}
+	case "*":
+		v = i * j
+	case "+":
+		v = i + j
+	case "-":
+		v = i - j
+	case "%":
+		m := math.Mod(float64(i), float64(j))
+		if math.IsNaN(m) == true {
+			v = 0
+		} else {
+			v = int(m)
+		}
+	}
+	return v
 }
