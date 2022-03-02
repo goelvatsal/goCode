@@ -113,57 +113,64 @@ import (
 // ---------------------------------------------------------
 
 func main() {
+	args := os.Args[1:]
+
 	if len(os.Args) != 3 {
 		fmt.Println("Usage: [op = %*/+-] [size]")
 		return
 	}
 
-	os1 := strings.IndexAny(os.Args[1], "%*-/+")
+	os1 := strings.IndexAny(args[0], "%*-/+")
 
 	if os1 == -1 {
 		fmt.Println("Invalid operator.\nValid ops are: %+-*/")
 		return
 	}
 
-	n, err := strconv.Atoi(os.Args[2])
-
+	n, err := strconv.Atoi(args[1])
 	if err != nil {
 		fmt.Println("Incorrect size value.\nUsage: [op = %*/+-] [size]")
 		return
 	}
 
-	fmt.Printf("%5s", os.Args[1])
+	// printing the first line
+	fmt.Printf("%5s", args[0])
 	for i := 0; i <= n; i++ {
 		fmt.Printf("%5d", i)
 	}
 	fmt.Println()
 
-	for i := 0.; i <= float64(n); i++ {
-		fmt.Printf("%5.0f", i)
-		for j := 0.; j <= float64(n); j++ {
-			m := math.Mod(i, j)
-			switch os.Args[1] {
-			case "/":
-				if i/j == 0 || j == 0 {
-					fmt.Printf("%5.1s", "0")
-				} else {
-					fmt.Printf("%5.1f", i/j)
-				}
-			case "*":
-				fmt.Printf("%5.0f", i*j)
-			case "+":
-				fmt.Printf("%5.0f", i+j)
-			case "-":
-				fmt.Printf("%5.0f", i-j)
-			case "%":
-				if math.IsNaN(m) == true {
-					fmt.Printf("%5.0f", 0.0)
-				} else {
-					fmt.Printf("%5.0f", m)
-				}
-			}
-
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%5d", i)
+		for j := 0; j <= n; j++ {
+			fmt.Printf("%5d", mathTable(args[0], j, i))
 		}
 		fmt.Println()
 	}
+}
+
+func mathTable(args string, j int, i int) int {
+	v := 0
+	switch args {
+	case "/":
+		if j == 0 || i == 0 {
+			v = 0
+		} else {
+			v = i / j
+		}
+	case "*":
+		v = i * j
+	case "+":
+		v = i + j
+	case "-":
+		v = i - j
+	case "%":
+		m := math.Mod(float64(i), float64(j))
+		if math.IsNaN(m) == true {
+			v = 0
+		} else {
+			v = int(m)
+		}
+	}
+	return v
 }
