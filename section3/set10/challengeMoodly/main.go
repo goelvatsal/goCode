@@ -21,6 +21,7 @@ func main() {
 	n, err := strconv.Atoi(args[0])
 	if err == nil {
 		fmt.Printf("%d is not a name.\n", n)
+		return
 	}
 
 	// user time in nanoseconds as seed
