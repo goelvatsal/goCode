@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Declare empty arrays
 //
@@ -59,4 +61,40 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	var (
+		names     = [3]string{"", "", ""}
+		distances = [5]int{0, 0, 0, 0, 0}
+		data      = [5]uint8{0x0, 0x0, 0x0, 0x0, 0x0}
+		ratios    = [1]float64{0}
+		alive     = [4]bool{false, false, false, false}
+		zero      = [0]uint8{}
+	)
+
+	// prints array type and what is stored in it
+	fmt.Printf("%#v\n", names)
+	fmt.Printf("%#v\n", distances)
+	fmt.Printf("%#v\n", data)
+	fmt.Printf("%#v\n", ratios)
+	fmt.Printf("%#v\n", alive)
+	fmt.Printf("%#v\n", zero)
+
+	fmt.Println()
+
+	// prints array type
+	fmt.Printf("%T\n", names)
+	fmt.Printf("%T\n", distances)
+	fmt.Printf("%T\n", data)
+	fmt.Printf("%T\n", ratios)
+	fmt.Printf("%T\n", alive)
+	fmt.Printf("%T\n", zero)
+
+	fmt.Println()
+
+	// prints items stored in array
+	fmt.Printf("%q\n", names)
+	fmt.Printf("%v\n", distances)
+	fmt.Printf("%v\n", data)
+	fmt.Printf("%v\n", ratios)
+	fmt.Printf("%v\n", alive)
+	fmt.Printf("%v\n", zero)
 }
