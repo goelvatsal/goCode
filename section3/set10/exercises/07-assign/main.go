@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Assign the Arrays
 //
@@ -42,4 +44,11 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	books := [3]string{"Kafka's Revenge", "Stay Golden", "Everythingship"}
+	upper := [3]string{"KAFKA'S REVENGE", "STAY GOLDEN", "EVERYTHINGSHIP"}
+	lower := [3]string{"kafka's revenge", "stay golden", "everythingship"}
+
+	fmt.Printf("books: %q\n", books)
+	fmt.Printf("upper: %q\n", upper)
+	fmt.Printf("lower: %q\n", lower)
 }
