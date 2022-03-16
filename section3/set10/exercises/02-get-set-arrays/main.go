@@ -157,12 +157,32 @@ func main() {
 	}
 
 	fmt.Println()
-	fmt.Printf("zero[0]: %v\n", zero)
+	fmt.Printf("zero[0]: %v\n\n", zero)
 
-	for i := 0; i < 3; i++ {
-		fmt.Printf("names[%d]: %v\n", i, names[i])
-
-		i < 5
-		fmt.Printf("distances[%d]: %v\n", i, distances[i])
+	for i, q := range names {
+		fmt.Printf("names[%d]: %s\n", i, q)
 	}
+
+	fmt.Println()
+	for i, q := range distances {
+		fmt.Printf("distances[%d]: %v\n", i, q)
+	}
+
+	fmt.Println()
+	for i, q := range data {
+		fmt.Printf("data[%d]: %v\n", i, q)
+	}
+
+	fmt.Println()
+	for i, q := range ratios {
+		fmt.Printf("ratios[%d]: %v\n", i, q)
+	}
+
+	fmt.Println()
+	for i, q := range alive {
+		fmt.Printf("alive[%d]: %v\n", i, q)
+	}
+
+	fmt.Println()
+	fmt.Printf("zero[0]: %v\n", zero)
 }
