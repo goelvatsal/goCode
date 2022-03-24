@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Currency Converter
 //
@@ -19,7 +25,7 @@ package main
 //
 //   2. Create an array that contains the conversion ratios.
 //
-//      You should use keyed elements and the contants you've declared before.
+//      You should use keyed elements and the constants you've declared before.
 //
 //   3. Get the USD amount to be converted from the command line.
 //
@@ -31,8 +37,8 @@ package main
 //   go run main.go
 //     Please provide the amount to be converted.
 //
-//   go run main.go invalid
-//     Invalid amount. It should be a number.
+//   go run main.go
+//   invalid amount. It should be a number.
 //
 //   go run main.go 10.5
 //     10.50 USD is 9.24 EUR
@@ -46,4 +52,41 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	const (
+		EUR = 9 - iota
+		GBP
+		JPY
+	)
+
+	rates := [...]float64{
+		EUR: 0.88,
+		GBP: 0.78,
+		JPY: 113.02,
+	}
+
+	// declare variables
+	args := os.Args[1:]
+
+	if len(os.Args) != 2 || args[0] == "" {
+		fmt.Println("Type in a number.")
+		return
+	}
+
+	// convert os.Args[1] into int
+	n, err := strconv.Atoi(args[0])
+
+	// error handling
+	if err != nil {
+		fmt.Printf("%v is an invalid amount. It should be a number.\n", args[0])
+		return
+	}
+
+	// then convert int to float
+	f := float64(n)
+
+	// multiply float with currency ratio
+	fmt.Printf("%.2f USD is %v %v.\n", f, f*rates[EUR], rates[EUR])
+	fmt.Printf("1.00 USD is %v %v.\n", f*rates[GBP], rates[GBP])
+	fmt.Printf("1.00 USD is %v %v.\n", f*rates[JPY], rates[JPY])
+	// print new value with printf
 }
