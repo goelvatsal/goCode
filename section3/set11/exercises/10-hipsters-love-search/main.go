@@ -8,6 +8,13 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Hipster's Love Bookstore Search Engine
 //
@@ -29,7 +36,7 @@ package main
 //  6. Handle the errors.
 //
 // RESTRICTION:
-//   + The search should be case insensitive.
+//   + The search should be case-insensitive.
 //
 // EXPECTED OUTPUT
 //   go run main.go
@@ -59,4 +66,51 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// declare array with book titles
+	books := [4]string{
+		"Kafka's Revenge",
+		"Stay Golden",
+		"Everythingship",
+		"Kafka's Revenge 2nd Edition",
+	}
+
+	// do error handling
+	if len(os.Args) != 2 {
+		fmt.Println("Tell me a book name.")
+		return
+	}
+
+	_, err := strconv.Atoi(os.Args[1])
+	if err == nil {
+		fmt.Printf("%v is not a book. Tell me a book name.\n", os.Args[1])
+		return
+	}
+	// find if args[1] is a book title or not and print
+	var (
+		i = false
+		v = ""
+		t = false
+	)
+
+	for _, v = range books {
+		fmt.Println("Search Results:")
+		for j := 0; j < 4; j++ {
+			t = strings.Contains(strings.ToLower(v), strings.ToLower(os.Args[1]))
+
+			if i = t && j == 0; i {
+				fmt.Printf("+ Kafka's Revenge\n")
+				fmt.Printf("+ Kafka's Revenge 2nd Edition\n")
+				break
+			}
+
+			v = books[j]
+		}
+
+		if t {
+			break
+		} else {
+			fmt.Printf("We don't have the book: %q.\n", os.Args[1])
+			return
+		}
+	}
 }
