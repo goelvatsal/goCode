@@ -46,9 +46,9 @@ import (
 //     10.50 USD is 1186.71 JPY
 //
 //   go run main.go 1
-//     1.00 USD is 0.88 EUR
-//     1.00 USD is 0.78 GBP
-//     1.00 USD is 113.02 JPY
+//     %.2f USD is 0.88 EUR
+//     %.2f USD is 0.78 GBP
+//     %.2f USD is 113.02 JPY
 // ---------------------------------------------------------
 
 func main() {
@@ -73,7 +73,7 @@ func main() {
 	}
 
 	// convert os.Args[1] into int
-	n, err := strconv.Atoi(args[0])
+	n, err := strconv.ParseFloat(args[0], 64)
 
 	// error handling
 	if err != nil {
@@ -81,12 +81,8 @@ func main() {
 		return
 	}
 
-	// then convert int to float
-	f := float64(n)
-
-	// multiply float with currency ratio
-	fmt.Printf("%.2f USD is %v %v.\n", f, f*rates[EUR], rates[EUR])
-	fmt.Printf("1.00 USD is %v %v.\n", f*rates[GBP], rates[GBP])
-	fmt.Printf("1.00 USD is %v %v.\n", f*rates[JPY], rates[JPY])
-	// print new value with printf
+	// multiply float with currency ratio and print
+	fmt.Printf("%.1f USD is %.2f EUR.\n", n, n*rates[EUR])
+	fmt.Printf("%.1f USD is %.2f GBP.\n", n, n*rates[GBP])
+	fmt.Printf("%.1f USD is %.2f JPY.\n", n, n*rates[JPY])
 }
