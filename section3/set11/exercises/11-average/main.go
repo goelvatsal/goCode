@@ -54,7 +54,7 @@ func main() {
 
 	avg := [5]int{0, 0, 0, 0, 0}
 
-	for i := 0; i < len(os.Args)-1; i++ {
+	for i := 0; i < len(avg)-1; i++ {
 		n, err := strconv.Atoi(os.Args[i+1])
 		if err != nil {
 			fmt.Println("Please tell me numbers (maximum 5)")
@@ -73,5 +73,5 @@ func main() {
 
 	// avg the array using a for loop
 	fmt.Printf("Your array: %v\n", avg)
-	fmt.Printf("Average: %d\n", sum/len(os.Args)-1)
+	fmt.Printf("Average: %d\n", sum/len(avg))
 }
