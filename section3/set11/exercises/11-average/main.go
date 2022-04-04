@@ -60,22 +60,18 @@ func main() {
 			fmt.Println("Please tell me numbers (maximum 5)")
 			return
 		}
-
 		avg[i] = n
 	}
-	fmt.Printf("Array: %v\n", avg)
+	//fmt.Printf("Array: %v\n", avg)
 
 	sum := 0
 	// create for loop to prompt user to input values
 	for i := 0; i < len(os.Args)-1; i++ {
-		if i == 4 {
-			break
-		}
-
-		presum := avg[i+1]
-		sum = presum + avg[i+2]
+		sum += avg[i]
 	}
+	//fmt.Printf("Sum: %d\n", sum)
 
 	// avg the array using a for loop
-	fmt.Printf("Sum: %d\n", sum)
+	fmt.Printf("Your array: %v\n", avg)
+	fmt.Printf("Average: %d\n", sum/len(os.Args)-1)
 }
