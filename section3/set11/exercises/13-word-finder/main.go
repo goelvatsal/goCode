@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Word Finder
 //
@@ -26,7 +32,7 @@ package main
 //   3. Print the words found.
 //
 // RESTRICTION
-//   + The search and the filtering should be case insensitive
+//   + The search and the filtering should be case-insensitive
 //
 // HINT
 //   + strings.Fields function converts a given string to a slice.
@@ -54,4 +60,44 @@ package main
 const corpus = "lazy cat jumps again and again and again since the beginning this was very important"
 
 func main() {
+	words := strings.Fields(corpus)
+	query := os.Args[1:]
+	blocked := [...]string{"and", "or", "was", "the", "since", "very"}
+	//j := 1
+
+	if len(os.Args) == 1 {
+		fmt.Println("Please give me a word to search.")
+	}
+
+queries:
+	for _, q := range query {
+	search:
+		for i, w := range words {
+			if i == len(os.Args)-1 {
+
+			}
+
+			switch os.Args[i] {
+			case blocked[i]:
+				break search
+			}
+
+			//if j == len(os.Args) {
+			//	j = j + 1
+			//}
+			//
+			//for j = 1; j < len(os.Args); j++ {
+			//	if os.Args[j] == blocked[i] {
+			//		break search
+			//	}
+			//}
+
+			if q == w {
+				fmt.Printf("#%-2d: %q\n", i+1, w)
+
+				// find the first word then quit
+				continue queries
+			}
+		}
+	}
 }
