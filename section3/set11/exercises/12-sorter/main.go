@@ -43,7 +43,7 @@ import (
 //     Please give me up to 5 numbers.
 //
 //   go run main.go 6 5 4 3 2 1
-//     Sorry. Go arrays are fixed. So, for now, I'm only supporting sorting 5 numbers...
+//   Sorry. Go arrays are fixed. So, for now, I'm only supporting sorting 5 numbers...
 //
 //   go run main.go 5 4 3 2 1
 //     [1 2 3 4 5]
@@ -73,19 +73,11 @@ func main() {
 	fmt.Printf("%v\n", a)
 
 	// add bubble sorting program
-	for i := 0; i < len(args); i++ {
-		for j := 0; j < len(args); j++ {
-			if j == 4 {
-				break
-			}
-
+	for i := 0; i < 5; i++ {
+		for j := 0; j < 4; j++ {
 			if a[j] > a[j+1] {
 				a[j], a[j+1] = a[j+1], a[j]
 			}
-
-			//if j == 4 && a[4] < a[0] {
-			//	a[4], a[0] = a[0], a[4]
-			//}
 		}
 	}
 
