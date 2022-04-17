@@ -53,41 +53,42 @@ import (
 // ---------------------------------------------------------
 
 func main() {
-	// declare array
-	a := [...]int{0, 0, 0, 0, 0}
-
 	if len(os.Args) != 6 {
 		fmt.Println("Please give me 5 numbers.")
 		return
 	}
 
-	// error handling
-	n, err := strconv.Atoi(os.Args[1])
-	n1, err1 := strconv.Atoi(os.Args[2])
-	n2, err2 := strconv.Atoi(os.Args[3])
-	n3, err3 := strconv.Atoi(os.Args[4])
-	n4, err4 := strconv.Atoi(os.Args[5])
+	a := [5]int{}
+	args := os.Args[1:]
 
-	if err != nil || err1 != nil || err2 != nil || err3 != nil || err4 != nil {
-		fmt.Println("Please give me 5 numbers.")
-		return
+	for i := 0; i < len(args); i++ {
+		n, err := strconv.Atoi(args[i])
+		if err != nil {
+			fmt.Println("Please give me 5 numbers.")
+			return
+		}
+		a[i] = n
 	}
 
-	arrN := [5]int{n, n1, n2, n3, n4}
-
-	for i := 1; i < 6; i++ {
-		a[i] = arrN[i]
-	}
 	fmt.Printf("%v\n", a)
 
 	// add bubble sorting program
-	for i := 0; i < 5; i++ {
-		for j := 0; j < 5-i; j++ {
+	for i := 0; i < len(args); i++ {
+		for j := 0; j < len(args); j++ {
+			if j == 4 {
+				break
+			}
+
 			if a[j] > a[j+1] {
 				a[j], a[j+1] = a[j+1], a[j]
 			}
+
+			//if j == 4 && a[4] < a[0] {
+			//	a[4], a[0] = a[0], a[4]
+			//}
 		}
 	}
 
 	// print the sorted array
+	fmt.Printf("sorted array: %v\n", a)
 }
