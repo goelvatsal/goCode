@@ -8,11 +8,16 @@
 
 package main
 
+import (
+	"fmt"
+	"time"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Append #2
 //
 //  1. Create the following nil slices:
-//     + Pizza toppings
+//     + Pizza pizza
 //     + Departure times
 //     + Student graduation years
 //     + On/off states of lights in a room
@@ -46,4 +51,20 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	var (
+		pizza     []string
+		deptTimes []time.Time
+		gradYears []int
+		lights    []bool
+	)
+
+	pizza = append(pizza, "cheese", "bell peppers", "onions")
+	deptTimes = append(deptTimes, time.Now().Add(time.Hour*24), time.Now().Add(time.Hour*48), time.Now().Add(time.Hour*72))
+	gradYears = append(gradYears, 10191, 2026, 1776)
+	lights = append(lights, false, false, false)
+
+	fmt.Printf("pizza: %s\n\n", pizza)
+	fmt.Printf("gradYears: %d\n\n", gradYears)
+	fmt.Printf("deptTimes: %s\n\n", deptTimes)
+	fmt.Printf("lights: %t\n", lights)
 }
