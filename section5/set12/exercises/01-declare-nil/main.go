@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Declare nil slices
 //
@@ -21,7 +23,7 @@ package main
 //
 //    4. Currency exchange ratios (ratios slice)
 //
-//    5. Up/Down status of web servers (alives slice)
+//    5. Up/Down status of web servers (alive slice)
 //
 //
 //  2. Print their type, length and whether they're equal to nil value or not.
@@ -32,8 +34,19 @@ package main
 //  distances: []int 0 true
 //  data     : []uint8 0 true
 //  ratios   : []float64 0 true
-//  alives   : []bool 0 true
+//  alive    : []bool 0 true
 // ---------------------------------------------------------
 
 func main() {
+	var names []string
+	var distances []int
+	var data []uint8
+	var ratios []float64
+	var alive []bool
+
+	fmt.Printf("names:     : %T %d %t\n", names, len(names), names == nil)
+	fmt.Printf("distances: : %T %d %t\n", distances, len(distances), distances == nil)
+	fmt.Printf("data:      : %T %d %t\n", data, len(data), data == nil)
+	fmt.Printf("ratios:    : %T %d %t\n", ratios, len(ratios), ratios == nil)
+	fmt.Printf("alive:     : %T %d %t\n", alive, len(alive), alive == nil)
 }
