@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"sort"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Append and Sort Numbers
 //
@@ -43,4 +49,19 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	// handle error handling
+	if len(os.Args) == 1 {
+		fmt.Println("Please provide some numbers.")
+		return
+	}
+
+	// attach user inputted numbers to an int slice
+	var l []string
+	for i := 1; i < len(os.Args); i++ {
+		l = append(l, os.Args[i])
+	}
+
+	// sort numbers using sort.Ints
+	sort.Strings(l)
+	fmt.Println(l)
 }

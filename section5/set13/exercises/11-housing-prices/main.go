@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Housing Prices
 //
@@ -69,11 +74,23 @@ package main
 func main() {
 	const (
 		header = "Location,Size,Beds,Baths,Price"
-		data   = `New York,100,2,1,100000
-New York,150,3,2,200000
-Paris,200,4,3,400000
-Istanbul,500,10,5,1000000`
-
+		data   = "New York,100,2,1,100000,New York,150,3,2,200000,Paris,200,4,3,400000,Istanbul,500,10,5,1000000"
+		//data      = "0,	  1   2 3 4      5        6   7 8 9  100,2,1,100000,New York,150,3,2,200000,Paris,200,4,3,400000,Istanbul,500,10,5,1000000"
 		separator = ","
 	)
+
+	headerS := strings.Split(header, separator)
+	for i := 0; i < len(headerS); i++ {
+		fmt.Printf("%-15s", headerS[i])
+	}
+	fmt.Println("\n===========================================================================")
+
+	dataS := strings.Split(data, separator)
+	for i := 0; i < len(dataS); i++ {
+		fmt.Printf("%-15s", dataS[i])
+
+		if (i+1)%len(headerS) == 0 {
+			fmt.Println()
+		}
+	}
 }
