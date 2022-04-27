@@ -56,6 +56,8 @@ func main() {
 	}
 
 	// attach user inputted numbers to an int slice
+	// because os.Args[1] is the first user-inputted number,
+	// this program is starting from that
 	var nums []string
 	for i := 1; i < len(os.Args); i++ {
 		nums = append(nums, os.Args[i])
