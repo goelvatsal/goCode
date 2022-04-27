@@ -36,21 +36,64 @@ import (
 //
 // ---------------------------------------------------------
 
+const (
+	header    = "Location,Size,Beds,Baths,Price"
+	data      = "New York,100,2,1,100000,New York,150,3,2,200000,Paris,200,4,3,400000,Istanbul,500,10,5,1000000"
+	separator = ","
+)
+
 func main() {
-	const (
-		header = "Location,Size,Beds,Baths,Price"
-		data   = "New York,100,2,1,100000,New York,150,3,2,200000,Paris,200,4,3,400000,Istanbul,500,10,5,1000000"
-
-		separator = ","
-	)
-
+	dataS := strings.Split(data, separator)
 	headerS := strings.Split(header, separator)
+	printData(dataS, headerS)
+	fmt.Printf("Average:       ")
+
+	for i := 1; i < len(headerS); i++ {
+		fmt.Printf("%-15.2f", findColumnAvg(dataS, headerS, i))
+	}
+	fmt.Println()
+}
+
+func findColumnData(dataS []string, headerS []string, desiredColumnIndex int) []string {
+	var size []string
+
+	var lines int
+	for i := 0; i < len(dataS); i++ {
+		if i == (desiredColumnIndex + lines*len(headerS)) {
+			size = append(size, dataS[i])
+		}
+
+		if (i+1)%len(headerS) == 0 {
+			lines++
+		}
+	}
+
+	return size
+}
+
+func findAvg(nums []string) float64 {
+	sum := 0.0
+	for i := 0; i < len(nums); i++ {
+		n, _ := strconv.ParseFloat(nums[i], 64)
+		sum += n
+	}
+
+	//fmt.Println("abc", sum)
+	return sum / float64(len(nums))
+}
+
+func findColumnAvg(dataS []string, headerS []string, desiredColumnIndex int) float64 {
+	size := findColumnData(dataS, headerS, desiredColumnIndex)
+	return findAvg(size)
+}
+
+func printData(dataS, headerS []string) {
 	for i := 0; i < len(headerS); i++ {
 		fmt.Printf("%-15s", headerS[i])
 	}
+
 	fmt.Println("\n===========================================================================")
 
-	dataS := strings.Split(data, separator)
 	for i := 0; i < len(dataS); i++ {
 		fmt.Printf("%-15s", dataS[i])
 
@@ -58,42 +101,5 @@ func main() {
 			fmt.Println()
 		}
 	}
-
 	fmt.Println("\n===========================================================================")
-	fmt.Printf("Average:       ")
-	size := []string{dataS[1], dataS[6], dataS[11], dataS[16]}
-	var sum float64
-	for i := 0; i < len(size); i++ {
-		n, _ := strconv.ParseFloat(size[i], 64)
-		sum += n
-	}
-	avg := sum / float64(len(size))
-	fmt.Printf("%-15.2f", avg)
-
-	bed := []string{dataS[2], dataS[7], dataS[12], dataS[17]}
-	sum = 0
-	for i := 0; i < len(bed); i++ {
-		n, _ := strconv.ParseFloat(bed[i], 64)
-		sum += n
-	}
-	avg = sum / float64(len(bed))
-	fmt.Printf("%-15.2f", avg)
-
-	bath := []string{dataS[3], dataS[8], dataS[13], dataS[18]}
-	sum = 0
-	for i := 0; i < len(bath); i++ {
-		n, _ := strconv.ParseFloat(bed[i], 64)
-		sum += n
-	}
-	avg = sum / float64(len(bath))
-	fmt.Printf("%-15.2f", avg)
-
-	price := []string{dataS[4], dataS[9], dataS[14], dataS[19]}
-	sum = 0
-	for i := 0; i < len(price); i++ {
-		n, _ := strconv.ParseFloat(price[i], 64)
-		sum += n
-	}
-	avg = sum / float64(len(price))
-	fmt.Printf("%-15.0f\n", avg)
 }
