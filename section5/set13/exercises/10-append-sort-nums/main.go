@@ -56,12 +56,14 @@ func main() {
 	}
 
 	// attach user inputted numbers to an int slice
-	var l []string
+	// because os.Args[1] is the first user-inputted number,
+	// this program is starting from that
+	var nums []string
 	for i := 1; i < len(os.Args); i++ {
-		l = append(l, os.Args[i])
+		nums = append(nums, os.Args[i])
 	}
 
 	// sort numbers using sort.Ints
-	sort.Strings(l)
-	fmt.Println(l)
+	sort.Strings(nums)
+	fmt.Println(nums)
 }
