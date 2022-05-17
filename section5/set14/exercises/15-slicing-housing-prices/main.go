@@ -133,4 +133,8 @@ Istanbul,500,10,5,1000000`
 
 		separator = ","
 	)
+	// split data into separate slices
+	// use if statements to check if os.Args[1] is equal to header
+	// error handling
+	// print them
 }

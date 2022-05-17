@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Slicing by arguments
 //
@@ -113,5 +119,57 @@ package main
 
 func main() {
 	// uncomment the slice below
-	// ships := []string{"Normandy", "Verrikan", "Nexus", "Warsaw"}
+	ships := []string{"Normandy", "Verrikan", "Nexus", "Warsaw"}
+	//fmt.Println(len(os.Args))
+
+	// print []string slice
+	fmt.Printf("%q\n\n", ships)
+
+	// handle errors
+	if len(os.Args) == 1 || len(os.Args) > 3 {
+		fmt.Println("Provide the [starting] and [stopping] positions.")
+		//fmt.Println(os.Args)
+		return
+	}
+
+	// get starting/stopping positions from command line
+	start := os.Args[1]
+
+	var endInt int
+	if len(os.Args) == 3 {
+		end := os.Args[2]
+		endN, err1 := strconv.Atoi(end)
+
+		if err1 != nil {
+			fmt.Println("This program only accepts integer numbers.")
+			return
+		}
+
+		if endN < 0 {
+			fmt.Println("No negative numbers!")
+			return
+		}
+		endInt = endN
+	} else {
+		endInt = len(ships)
+	}
+
+	startN, err := strconv.Atoi(start)
+
+	if err != nil {
+		fmt.Println("This program only accepts integer numbers.")
+		return
+	}
+
+	if startN < 0 {
+		fmt.Println("No negative numbers!")
+		return
+	}
+
+	// use if statement or for loop to look using vars
+	if os.Args[1] != "" {
+		fmt.Printf("%q\n", ships[startN:endInt])
+	} else {
+		fmt.Printf("%q\n", ships[startN:])
+	}
 }

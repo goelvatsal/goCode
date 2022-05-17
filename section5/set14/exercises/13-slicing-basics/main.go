@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Slice the numbers
 //
@@ -58,5 +60,13 @@ package main
 
 func main() {
 	// uncomment the declaration below
-	// data := "2 4 6 1 3 5"
+	data := "2 4 6 1 3 5"
+	fmt.Println("nums         :", data)
+	fmt.Println("evens        :", data[:5])
+	fmt.Println("odds         :", data[6:])
+	fmt.Println("mid          :", data[4:7])
+	fmt.Println("first 2      :", data[:3])
+	fmt.Println("last 2       :", data[8:])
+	fmt.Println("evens last 1 :", data[4:5])
+	fmt.Println("odds last 2  :", data[8:])
 }
